@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160602165455) do
     t.string   "name"
     t.string   "email"
     t.integer  "age"
-    t.string   "stage"
+    t.string   "state"
     t.string   "office"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
