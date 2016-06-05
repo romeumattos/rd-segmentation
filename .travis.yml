@@ -6,3 +6,6 @@ services:
   - sqlite3
   - postgresql
 script: xvfb-run -a bundle exec rspec
+addons:
+    code_climate:
+        repo_token: 6e959a7e52e1f295bfd58b274eb5a00b23f0a0d155e10ef43a162d35ab80ce79
