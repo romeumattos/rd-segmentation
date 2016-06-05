@@ -1,6 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Contacts</h1>
+<div>
+  <h2>Filters</h2>
+  <%= form_tag contacts_path, :method => 'get', :id => "contacts_search" do %>
+    <p>Name: <%= text_field_tag :name, params[:name] %></p>
+    <p>Email: <%= text_field_tag :email, params[:email] %></p>
+    <p>Age: <%= text_field_tag :age, params[:age] %></p>
+    <p>State: <%= text_field_tag :state, params[:state] %></p>
+    <p>Office: <%= text_field_tag :office, params[:office] %></p>
+    <p><%= submit_tag "Search", :name => nil %></p>
+  <% end %>
+</div>
 
 <table>
   <thead>

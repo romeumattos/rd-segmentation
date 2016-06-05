@@ -12,18 +12,23 @@ RSpec.describe ContactsController, type: :controller do
 
   describe 'GET #index' do
     it "assigns all contacts as @contact" do
-       contact = FactoryGirl.create(:contact)
-       get :index
-       expect(assigns(:contacts)).to eq([contact])
-     end
+      contact = FactoryGirl.create(:contact)
+      get :index
+      expect(assigns(:contacts)).to eq([contact])
+    end
+    it "assigns contacts filter by name as @contact" do
+      contact = FactoryGirl.create(:contact)
+      get :index, name: contact.name
+      expect(assigns(:contacts)).to eq([contact])
+    end
     it "returns http success" do
       get :index
       expect(response).to have_http_status(:success)
     end
     it "renders the :index view" do
-       get :index
-       expect(response).to render_template("index")
-     end
+      get :index
+      expect(response).to render_template("index")
+    end
   end
 
   describe 'POST #create' do
@@ -54,7 +59,7 @@ RSpec.describe ContactsController, type: :controller do
         { state: 'São Paulo' }
       end
 
-      it 'updates the requested contact', focus:true do
+      it 'updates the requested contact' do
         contact = FactoryGirl.create(:contact)
         put :update, { id: contact.to_param, contact: new_attributes }
         contact.reload
