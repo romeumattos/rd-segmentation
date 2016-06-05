@@ -11,14 +11,34 @@ RSpec.describe ContactsController, type: :controller do
   end
 
   describe 'GET #index' do
-    it "assigns all contacts as @contact" do
+    it "return all contacts with @contact" do
       contact = FactoryGirl.create(:contact)
       get :index
       expect(assigns(:contacts)).to eq([contact])
     end
-    it "assigns contacts filter by name as @contact" do
-      contact = FactoryGirl.create(:contact)
+    it "returns all contacts filtered by name with @contact" do
+      contact = FactoryGirl.create(:contact_two)
       get :index, name: contact.name
+      expect(assigns(:contacts)).to eq([contact])
+    end
+    it "returns all contacts filtered by email with @contact" do
+      contact = FactoryGirl.create(:contact_two)
+      get :index, email: contact.email
+      expect(assigns(:contacts)).to eq([contact])
+    end
+    it "returns all contacts filtered by age with @contact" do
+      contact = FactoryGirl.create(:contact_two)
+      get :index, age: contact.age
+      expect(assigns(:contacts)).to eq([contact])
+    end
+    it "returns all contacts filtered by state with @contact" do
+      contact = FactoryGirl.create(:contact_two)
+      get :index, state: contact.state
+      expect(assigns(:contacts)).to eq([contact])
+    end
+    it "returns all contacts filtered by office with @contact" do
+      contact = FactoryGirl.create(:contact_two)
+      get :index, office: contact.office
       expect(assigns(:contacts)).to eq([contact])
     end
     it "returns http success" do

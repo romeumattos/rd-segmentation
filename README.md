@@ -18,4 +18,4 @@
 Execute ```rails server```
 
 ### Run Tests
-Execute ```rspec```
+Execute ```bundle exec rspec```
