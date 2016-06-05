@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/romeumattos/rd-segmentation.svg?branch=master)](https://travis-ci.org/romeumattos/rd-segmentation)
 [![Code Climate](https://codeclimate.com/github/romeumattos/rd-segmentation/badges/gpa.svg)](https://codeclimate.com/github/romeumattos/rd-segmentation)
+[![Test Coverage](https://codeclimate.com/github/romeumattos/rd-segmentation/badges/coverage.svg)](https://codeclimate.com/github/romeumattos/rd-segmentation/coverage)
 
 # RD Segmentation Challenge
 
