@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/romeumattos/rd-segmentation.svg?branch=master)](https://travis-ci.org/romeumattos/rd-segmentation)
+
 # RD Segmentation Challenge
 
 ## Requirements
