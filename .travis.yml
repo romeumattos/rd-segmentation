@@ -1,0 +1,8 @@
+sudo: false
+language: ruby
+rvm:
+  - 2.2.4
+services:
+  - sqlite3
+  - postgresql
+script: xvfb-run -a bundle exec rspec

@@ -4,7 +4,6 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    # contacts = Contact.all
     @contacts = Contact.where(nil)
     @contacts = @contacts.where(name: params[:name]) if params[:name].present?
     @contacts = @contacts.where(email: params[:email]) if params[:email].present?
